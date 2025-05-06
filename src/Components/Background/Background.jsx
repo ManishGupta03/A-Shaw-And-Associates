@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Background.css'
-import video1 from '../../assets/video2.mp4';
+// import video1 from '../../assets/video2.mp4';
 import image1 from '../../assets/img1.jpg';
 import image2 from '../../assets/img2.jpg';
 import image3 from '../../assets/img3.jpg';
@@ -28,7 +28,7 @@ const Background = ({ playStatus, heroCount }) => {
   if (playStatus) {
     return (
       <video className='background fade-in' autoPlay loop muted>
-        <source src={video1} type='video/mp4' />
+        <source src="https://player.cloudinary.com/embed/?cloud_name=domntnzxw&public_id=zmgqdcryiuoi7xuiuucx&profile=cld-default" type='video/mp4' />
       </video>
     );
   }
