@@ -1,0 +1,87 @@
+.hero{
+    margin:0px 120px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+.hero-text {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 75px; /* Reduced from 90px */
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s ease infinite;
+}
+
+.hero-explore{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 5px 8px;
+    padding-left: 30px;
+    border-radius: 60px;
+    background-color: white;
+    border-color: #292929;
+    cursor: pointer;
+
+}
+.hero-explore p{
+    color: #292929;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+.hero-dot-play{ 
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.hero-dots{
+    margin-left: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+
+}
+.hero-dot{
+    width: 12px;
+    height:12px;
+    
+    background: #ffffff;
+    border-radius: 7.5px;
+    cursor: pointer;
+
+}
+.hero-dot.orange{
+    background: orangered;
+
+}
+.hero-play{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    }
+    .hero-play img{
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        filter: grayscale(100%) invert(100%);  /* This will turn the image black */
+       width: 70px;
+      
+            }
+
+    .hero-play img:hover {
+        transform: scale(1.1);  /* Slight zoom effect */
+      }
+.hero-play p{
+    color: #000000;
+    font-size: 15px;
+}

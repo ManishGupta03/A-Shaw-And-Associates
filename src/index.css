@@ -1,0 +1,18 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
+}
+/* Allow scrolling, but hide scrollbar (for modern browsers) */
+body {
+  overflow-y: scroll;
+  
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+html {
+  scroll-behavior: smooth;
+}

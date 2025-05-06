@@ -1,0 +1,107 @@
+ .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: #1d1d1d;
+    padding: 10px 40px;
+    margin-top: 55px;  
+    align-items: center;
+    height: 30px; 
+
+  }
+  
+  .nav-logo {
+    font-family: Outfit;
+    font-size: 42px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    font-size: 15px;
+    gap: 55px;
+    position: relative;
+    
+  
+  }
+  
+  .nav-menu li {
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover style for regular items */
+  .nav-menu li:hover {
+    color: bisque;
+  }
+  
+  /* Contact button should not get hover color change */
+  .nav-contact {
+    border-radius: 50px;
+    padding: 10px 38px;
+    background: linear-gradient(135deg, #f12711, #f5af19);
+    color: #ffffff;
+  }
+  
+  /* Prevent contact hover effect */
+  .nav-contact:hover {
+    background: #fff;
+    color: #262626;
+  }
+  
+  /* Logo image resize */
+  .resize {
+    height: 70px;
+    width: 200px;
+  }
+  
+  /* Dropdown Menu Styles */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+    z-index: 1000;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    margin: 0;
+  }
+  
+  .dropdown-menu li {
+    padding: 12px 20px;
+    color: white;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #555;
+  }
+
+  .nav-menu .nav-contact:hover {
+    color: #262626; 
+    background-color: #dddbdb; 
+  }
+  
+
+  .search-icon {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .search-icon :hover{
+      transform: scale(1.1);
+  }

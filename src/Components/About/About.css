@@ -1,0 +1,198 @@
+.about-section {
+    background: #111;
+    color: #f4f4f4;
+    padding: 80px 8% 100px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .about-heading {
+    font-size: 50px;
+    text-align: center; 
+    margin-bottom: -40px;
+    cursor: pointer;
+  }
+
+  .sub-title{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #facc15, #f97316);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor: pointer;
+  }
+  .intro-text {
+    text-align: center;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+  }
+  
+  .highlight-box {
+    background-color: #1f1f1f;
+    border-left: 5px solid #facc15;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    font-size: 16px;
+  }
+  
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .read-more-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more-link:hover {
+    background-color: #45a049;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .card {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+  }
+  .card h3 {
+    margin: 15px 0;
+    font-size: 22px;
+    color: #facc15;
+  }
+   .card-icon {
+    font-size: 50px;
+    color: #facc15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    
+  }
+  .card p,
+  .card ul {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .card ul {
+    padding-left: 20px;
+  }
+  .card ul li::marker {
+    color: #facc15;
+  }
+
+  .center-card {
+    grid-column: span 3;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+
+  .card-link {
+    display: inline-block;
+    padding: 6px 8px;
+    /* background-color: #0077c6; */
+    color: rgb(172, 172, 172);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-left: -8px;
+  }
+  
+  .card-link:hover {
+    /* background-color: #45a049; */
+    color: #f4f4f4;
+  }
+  
+  .final-note {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #facc15, #f97316);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor: pointer;
+  }
+  .final-note span{
+    color: red;
+    font-size: 30px;
+  }
+
+  .about-highlight-quote {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px auto 30px;
+    max-width: 900px;
+    text-align: center;
+  }
+  
+  .quote-text {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.6;
+  
+    background: linear-gradient(120deg, #fceabb, #f8d678);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  
+    text-shadow:
+      1px 1px 2px rgba(255, 255, 255, 0.6),
+      2px 2px 4px rgba(0, 0, 0, 0.1);
+  
+    transform: rotateY(5deg) rotateX(3deg);
+    perspective: 800px;
+  
+    transition: transform 0.4s ease;
+  }
+  
+  
+  
+  @keyframes subtle3DRotation {
+    0% {
+      transform: rotateY(5deg) rotateX(3deg);
+    }
+    100% {
+      transform: rotateY(-5deg) rotateX(-3deg);
+    }
+  }
+  
+  .quote-text {
+    animation: subtle3DRotation 8s ease-in-out infinite alternate;
+  }
+  
