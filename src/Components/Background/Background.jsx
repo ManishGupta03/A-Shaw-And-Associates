@@ -29,7 +29,7 @@ const Background = ({ playStatus, heroCount }) => {
 return (
   <>
     {playStatus ? (
-      <video className="background fade-in" autoPlay loop muted >
+      <video className="background fade-in" autoPlay loop muted playsInline>
         <source src="https://res.cloudinary.com/domntnzxw/video/upload/zmgqdcryiuoi7xuiuucx.mp4" type="video/mp4"/>
         </video>
     ) : (

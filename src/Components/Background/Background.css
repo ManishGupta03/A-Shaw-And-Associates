@@ -1,45 +1,63 @@
-
 /* Container for static images */
 .background-container {
-    position: absolute; /* Ensures background stays fixed */
-    width: 100%;
-    height: 100%;
-    top: 180px;
-    left: 0;
-    z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 180px;
+  left: 0;
+  z-index: -1;
+}
+
+/* Shared background style for both video and image */
+.background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Applies fade-in effect */
+.background.fade-in {
+  opacity: 1;
+}
+
+/* Optional: image blur */
+.imageblur {
+  filter: blur(1.5px);
+}
+
+/* Specific to video backgrounds */
+video.background {
+  position: absolute;
+  top: 180px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ Responsive Fixes for Mobile */
+@media (max-width: 768px) {
+  .background-container {
+    top: 0; /* Remove extra offset for mobile */
+    height: 100vh;
   }
-  
-  /* Shared background style for both video and image */
+
   .background {
-   
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    height: 100vh;
   }
-  
-  /* Applies fade-in effect */
-  .background.fade-in {
-    
-    opacity: 1;
-  }
-  /* image to blur */
-  /* .imageblur{ 
-    filter: blur(2px);
-  } */
-  
-  /* Optional: if you use video tag directly */
+
   video.background {
-    position: absolute;
-    top: 180px;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    top: 0; /* Remove 180px offset */
+    height: 100vh;
   }
-  
+
+  .imageblur {
+    filter: blur(0.5px); /* Less blur for small screens if desired */
+  }
+}
