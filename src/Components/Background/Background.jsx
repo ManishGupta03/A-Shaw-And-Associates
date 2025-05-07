@@ -18,26 +18,26 @@ const Background = ({ playStatus, heroCount }) => {
   const [fadeImage, setFadeImage] = useState(images[0]);
 
   useEffect(() => {
+    if(!playStatus){
     const timeout = setTimeout(() => {
       setFadeImage(images[heroCount % images.length]);
     }, 50); // delay ensures React renders fade transition
 
-    return () => clearTimeout(timeout);
-  }, [heroCount]);
+    return () => clearTimeout(timeout);}
+  }, [heroCount,playStatus]);
 
-  if (playStatus) {
-    return (
-      <video className='background fade-in' autoPlay loop muted>
-        <source src="https://player.cloudinary.com/embed/?cloud_name=domntnzxw&public_id=zmgqdcryiuoi7xuiuucx&profile=cld-default" type='video/mp4' />
-      </video>
-    );
-  }
-
-  return (
-    <div className="background-container">
-      <img src={fadeImage} className="background imageblur fade-in" alt="" />
-    </div>
-  );
+return (
+  <>
+    {playStatus ? (
+      <video className="background fade-in" autoPlay loop muted >
+        <source src="https://res.cloudinary.com/domntnzxw/video/upload/zmgqdcryiuoi7xuiuucx.mp4" type="video/mp4"/>
+        </video>
+    ) : (
+      <div className="background-container ">
+        <img src={fadeImage} className="background imageblur fade-in" alt="background" />
+      </div>
+    )}
+  </>
+);
 };
-
 export default Background;
