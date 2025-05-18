@@ -1,0 +1,77 @@
+.values-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f4f8, #ffffff);
+  padding: 40px 20px;
+}
+
+.glass-card {
+  max-width: 1000px;
+  width: 100%;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #333;
+}
+
+.section-heading {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.values-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.value-box {
+  flex: 1 1 220px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 26px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.value-box:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  font-size: 36px;
+  color: #4f46e5; /* Indigo-600 */
+  margin-bottom: 14px;
+}
+
+.value-box h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.value-box p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.closing-text {
+  margin-top: 36px;
+  font-size: 17px;
+  color: #334155;
+  text-align: center;
+  font-style: italic;
+}

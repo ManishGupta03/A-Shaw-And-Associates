@@ -15,6 +15,7 @@ import OurVision from './Components/OurVision/OurVision';
 import CoreValues from './Components/CoreValues/CoreValues';
 import WhyChooseUs from './Components/WhyChooseUs/WhyChooseUs';
 import WhatSetsUsApart from './Components/WhatSetsUsApart/WhatSetsUsApart';
+import FooterContact from './Components/footer/footer';
 
 
 
@@ -86,6 +87,7 @@ const App = () => {
               />
               <ServicesSection />
               <About />
+              <FooterContact/>
               {showPopup && (
                 <DisclaimerPopup onAgree={handleAgree} onDisagree={handleDisagree} />
               )}

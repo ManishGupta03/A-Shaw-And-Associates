@@ -1,0 +1,77 @@
+.choose-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e0e7ff, #f9fafb);
+  padding: 40px 20px;
+}
+
+.glass-card {
+  max-width: 1000px;
+  width: 100%;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #333;
+}
+
+.section-heading {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.intro-text {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.choose-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.choose-box {
+  flex: 1 1 220px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 26px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.choose-box:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  font-size: 36px;
+  color: #6366f1; /* Indigo-500 */
+  margin-bottom: 14px;
+}
+
+.choose-box h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #111827;
+  font-weight: 600;
+}
+
+.choose-box p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.55;
+}

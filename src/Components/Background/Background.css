@@ -26,9 +26,9 @@
 }
 
 /* Optional: image blur */
-.imageblur {
+/* .imageblur {
   filter: blur(1.5px);
-}
+} */
 
 /* Specific to video backgrounds */
 video.background {

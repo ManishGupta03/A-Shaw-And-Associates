@@ -1,0 +1,83 @@
+.footer-container {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 50px 20px;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-heading {
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer-subheading {
+  font-size: 18px;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-family: inherit;
+  resize: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #b3aedb;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.submit-btn {
+  background-color: #ff7e5f;
+  background-image: linear-gradient(to right, #feb47b, #ff7e5f);
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-image 0.4s ease;
+}
+
+.submit-btn:hover {
+  background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.status-message {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.status-message.success {
+  color: #b0f2a9;
+}
+
+.status-message.error {
+  color: #f08080;
+}
