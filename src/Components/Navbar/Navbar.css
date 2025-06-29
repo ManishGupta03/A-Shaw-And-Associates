@@ -22,6 +22,7 @@
   color: bisque;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 5px;
+  
 }
 
 
@@ -57,6 +58,10 @@
 
 .nav-menu li:hover {
   color: bisque;
+  transform: scale(1.05);
+  /* background-color: rgba(255, 255, 255, 0.05); */
+  /* border-radius: 5px; */
+  /* padding: 5px 5px; */
 }
 
 /* Contact button */
@@ -71,6 +76,7 @@
 .nav-menu .nav-contact:hover {
   background: #ffffff;
   color: #262626;
+   border-radius: 50px;
 }
 
 /* Dropdown */
@@ -78,7 +84,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #333;
+  background-color: #2b2a2a;
   display: none;
   flex-direction: column;
   min-width: 220px;
@@ -98,6 +104,9 @@
   transition: background-color 0.3s;
 }
 
+.dropdown.open .dropdown-menu {
+  display: flex;
+}
 .dropdown-menu li:hover {
   background-color: #555;
 }
@@ -171,6 +180,13 @@
     display: flex;
     /* padding: 15px 10px; */
 
+  }
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    padding-left: 15px;
+    
   }
   
 

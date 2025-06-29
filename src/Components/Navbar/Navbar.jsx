@@ -1,13 +1,12 @@
-import React, { useState,useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 import { FaSearch } from 'react-icons/fa';
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false); // 🔥 Add this
+  const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-
-  const navRef = useRef(null); // ⬅️ Reference to the entire nav
+  const navRef = useRef(null);
 
   const menuItems = [
     { title: 'HOME' },
@@ -17,19 +16,26 @@ const Navbar = () => {
     },
     {
       title: 'SERVICES',
-      dropdown: ['Accounting & Business Support','Audit and Assurance','Business Advisory','Digital Automation and Transformation','Taxation','Risk Advisory','Transaction Advisory'],
+      dropdown: [
+        'Accounting & Business Support',
+        'Audit and Assurance',
+        'Business Advisory',
+        'Digital Automation and Transformation',
+        'Taxation',
+        'Risk Advisory',
+        'Transaction Advisory',
+      ],
     },
     { title: 'INSIGHTS' },
     { title: 'NEWS & EVENTS' },
     {
       title: 'CAREERS',
-      dropdown: ['Why join us','Life at Aman Hub','In-House Journal','Current Openings','Apply Now','Gallery'],
+      dropdown: ['Why join us', 'Life at Aman Hub', 'In-House Journal', 'Current Openings', 'Apply Now', 'Gallery'],
     },
     { title: 'Contact', className: 'nav-contact' },
   ];
 
-
-  // 🔽 Handle click outside nav to close dropdown
+  // 🔽 Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
@@ -41,28 +47,42 @@ const Navbar = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // 🔽 Close all dropdowns when hamburger toggled
+  useEffect(() => {
+    if (!menuOpen) {
+      setActiveDropdown(null);
+    }
+  }, [menuOpen]);
+
   return (
     <div className="nav" ref={navRef}>
-      <div className="nav-logo">
-       👨‍🎓 AMAN HUB {/* 🔧 Add logo or text here */}
+      <div className="nav-logo">👨‍🎓 AMAN HUB</div>
+
+      <div className="search-icon">
+        <FaSearch />
       </div>
 
-      <div className="search-icon"><FaSearch /></div>
-
-      {/* 🔥 Add hamburger menu for mobile */}
       <div className="nav-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      {/* 🔧 Toggle 'active' class based on state */}
       <ul className={`nav-menu ${menuOpen ? 'active' : ''}`}>
         {menuItems.map((item, index) =>
           item.dropdown ? (
-            <Dropdown key={index} index={index} title={item.title} items={item.dropdown} activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown}  />
+            <Dropdown
+              key={index}
+              index={index}
+              title={item.title}
+              items={item.dropdown}
+              activeDropdown={activeDropdown}
+              setActiveDropdown={setActiveDropdown}
+            />
           ) : (
-            <li key={index} className={item.className || ''}
+            <li
+              key={index}
+              className={item.className || ''}
               onClick={() => {
                 setActiveDropdown(null);
                 if (item.title === 'Contact') {
@@ -71,7 +91,8 @@ const Navbar = () => {
                     contactSection.scrollIntoView({ behavior: 'smooth' });
                   }
                 }
-              }}>
+              }}
+            >
               {item.title}
             </li>
           )
