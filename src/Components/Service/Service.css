@@ -1,77 +1,110 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
-
 #service {
-    background-color: #f7f7f7;
-    padding: 60px 6% 80px;
-    text-align: center;
-  }
-  
-  .section-title .sub-title {
-    font-size: 44px;
-    color: #666;
-    cursor: pointer;
-  }
-  
-  .section-title .title {
-    font-size: 40px;
-    font-weight: bold;
-    margin-top: 10px;
-    cursor: pointer;
-  }
-  
-  .services {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    margin-top: 60px;
-    text-align: left;
-    justify-items: center;
-  }
-  
-  .service-card {
-    background: #eeeeee;
-    padding: 20px 15px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 400;
-    cursor: pointer;
-    transition: all 0.5s;
-  }
-  
-  .services > .service-card:nth-child(7):nth-last-child(1) {
+  background-color: #f7f7f7;
+  padding: 60px 6% 80px;
+  text-align: center;
+}
+
+.section-title .sub-title {
+  font-size: 44px;
+  color: #666;
+  cursor: pointer;
+}
+
+.section-title .title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin-top: 60px;
+  text-align: left;
+  justify-items: center;
+}
+.services > .service-card:nth-child(7):nth-last-child(1) {
     grid-column: 2 / 3; /* Places the last item in the center column */
   }
-  .service-card:hover {
-    background: linear-gradient(145deg, #ffcc70, #faca22, #ffb347);
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.3);
-    transition: all 0.4s ease-in-out;
-    /* border: 1px solid rgba(255, 255, 255, 0.3); */
-    backdrop-filter: blur(3px);
+.service-card {
+  background: #eeeeee;
+  padding: 20px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+.service-card:hover {
+  background: linear-gradient(145deg, #ffcc70, #faca22, #ffb347);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15), inset 0 0 10px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(3px);
+}
+
+.service-card .icon {
+  margin-top: 15px;
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.service-card li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* ✅ MOBILE RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
   }
-  
-  .service-card .icon {
-    margin-top: 15px;
-    font-size: 60px;
-    margin-bottom: 20px;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .service-card {
+    width: 90%;
   }
-  .service-card h2 {
+
+  .section-title .sub-title {
     font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
   }
-  
+
+  .section-title .title {
+    font-size: 24px;
+  }
+
+  .service-card .icon {
+    font-size: 40px;
+  }
+
+  .service-card h2 {
+    font-size: 20px;
+  }
 
   .service-card li {
-    margin-bottom: 8px;
-    font-size: 15px;
-    line-height: 1.6;
+    font-size: 14px;
   }
+  .services > .service-card:nth-child(7):nth-last-child(1) {
+    grid-column: 1 / 1; /* Places the last item in the center column */
+  }
+}

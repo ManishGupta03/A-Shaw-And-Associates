@@ -44,12 +44,14 @@ video.background {
 /* ✅ Responsive Fixes for Mobile */
 @media (max-width: 768px) {
   .background-container {
-    top: 0; /* Remove extra offset for mobile */
+    top: 100; /* Remove extra offset for mobile */
     height: 100vh;
-  }
+    width: 100%;
+ }
 
   .background {
-    height: 100vh;
+    height: 80vh;
+    width: 100vw;
   }
 
   video.background {
@@ -60,4 +62,5 @@ video.background {
   .imageblur {
     filter: blur(0.5px); /* Less blur for small screens if desired */
   }
+
 }

@@ -75,3 +75,51 @@
   text-align: center;
   font-style: italic;
 }
+ 
+
+
+@media (max-width: 768px) {
+  .values-wrapper {
+    padding: 20px 10px;
+  }
+
+  .glass-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .section-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .values-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .value-box {
+    padding: 18px;
+    border-radius: 12px;
+  }
+
+  .icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .value-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .value-box p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .closing-text {
+    font-size: 15px;
+    margin-top: 24px;
+  }
+}

@@ -1,13 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
-const Dropdown = ({ title, items }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Dropdown = ({ index, title, items, activeDropdown, setActiveDropdown }) => {
+  // const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  return (
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // run on mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
+  const isOpen = activeDropdown === index;
+
+  const handleClick = () => {
+    if (isMobile) {
+      setActiveDropdown(isOpen ? null : index); // toggle
+    }
+  };
+
+
+
+return (
     <li
-      className="dropdown"
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
+      className={`dropdown ${isOpen ? 'open' : ''}`}
+      onMouseEnter={() => !isMobile && setActiveDropdown(index)}
+      onMouseLeave={() => !isMobile && setActiveDropdown(null)}
+      onClick={handleClick}
     >
       {title}
       {isOpen && (

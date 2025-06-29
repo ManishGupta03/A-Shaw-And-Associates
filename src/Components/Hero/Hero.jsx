@@ -1,16 +1,31 @@
-import './Hero.css';
-import arrow_btn from '../../assets/arrow_btn.png';
-import play_icon from '../../assets/play_icon.png';
-import pause_icon from '../../assets/pause_icon.png';
+import "./Hero.css";
+import arrow_btn from "../../assets/arrow_btn.png";
+import play_icon from "../../assets/play_icon.png";
+import pause_icon from "../../assets/pause_icon.png";
 
-const Hero = ({ heroData, setHeroCount, heroCount, setPlayStatus, playStatus, totalCount }) => {
+const Hero = ({
+  heroData,
+  setHeroCount,
+  heroCount,
+  setPlayStatus,
+  playStatus,
+  totalCount,
+}) => {
   return (
-    <div className='hero'>
+    <div className="hero">
       <div className="hero-text">
         <p>{heroData.text1}</p>
         <p>{heroData.text2}</p>
       </div>
-      <div className="hero-explore">
+      <div
+        className="hero-explore"
+        onClick={() => {
+          const exploresection = document.getElementById("about");
+          if (exploresection) {
+            exploresection.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+      >
         <p>Explore the Features</p>
         <img src={arrow_btn} alt="" />
       </div>

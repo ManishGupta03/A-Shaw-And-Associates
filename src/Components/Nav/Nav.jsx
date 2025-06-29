@@ -30,7 +30,17 @@ const Nav = () => {
           item.dropdown ? (
             <Dropdown key={index} title={item.title} items={item.dropdown} />
           ) : (
-            <li key={index} className={item.className || ''}>
+            <li key={index} className={item.className || ''}
+            onClick={() => {
+          if (item.title === 'Contact') {
+            console.log('Contact clicked');
+            const contactSection = document.getElementById('contact-section');
+            if (contactSection) {
+              contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        }}
+        >
               {item.title}
             </li>
           )

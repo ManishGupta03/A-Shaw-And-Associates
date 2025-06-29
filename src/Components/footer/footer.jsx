@@ -41,12 +41,12 @@ const FooterContact = () => {
   };
 
   return (
-    <footer className="footer-container">
+    <footer className="footer-container" id="contact-section">
       <div className="footer-content">
         <h2 className="footer-heading">Get in Touch</h2>
         <p className="footer-subheading">Have questions or feedback? We'd love to hear from you!</p>
         
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit} >
           <input
             type="text"
             name="name"

@@ -81,3 +81,53 @@
   font-size: 17px;
   color: #333;
 }
+
+
+@media (max-width: 768px) {
+  .clientele-wrapper {
+    padding: 20px 10px;
+  }
+
+  .glass-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .section-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .info-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .info-box {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .info-box h3 {
+    font-size: 18px;
+  }
+
+  .info-box p {
+    font-size: 15px;
+  }
+
+  .closing-text {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+}

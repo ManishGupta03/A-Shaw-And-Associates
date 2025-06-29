@@ -19,13 +19,13 @@ const AboutUs = () => {
         <Link to="/about" className="read-more-link">Read More About Us →</Link>
             </div>
 
-        <div className="highlight-box">
+        {/* <div className="highlight-box">
           <p>
             <strong>Founded:</strong> January 2025 by Aman Shaw<br />
             <strong>Backed by:</strong> 22 associated CA firms nationwide<br />
             <strong>Headquartered:</strong> India
           </p>
-        </div>
+        </div> */}
 
         <div className="about-grid">
           <div className="card">
@@ -123,7 +123,7 @@ const AboutUs = () => {
 </div>
 
         <div className="final-note">
-          <h3><span>📞</span> Get in touch — Let’s grow together!</h3>
+          {/* <h3><span>📞</span> Get in touch — Let’s grow together!</h3> */}
         </div>
       </div>
     </section>

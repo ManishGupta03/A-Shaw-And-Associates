@@ -39,11 +39,12 @@
   font-family: inherit;
   resize: none;
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #b3aedb;
+  color: #474748;
 }
 
 .contact-form input:focus,
@@ -63,6 +64,7 @@
   color: #fff;
   cursor: pointer;
   transition: background-image 0.4s ease;
+  width: 640px;
 }
 
 .submit-btn:hover {
@@ -80,4 +82,34 @@
 
 .status-message.error {
   color: #f08080;
+}
+
+/* ✅ Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 30px 10px;
+    
+  }
+
+  .footer-heading {
+    font-size: 24px;
+  }
+
+  .footer-subheading {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 15px;
+    padding: 12px 16px;
+    width: 340px;
+  }
+
+  .submit-btn {
+    width: 370px;
+    font-size: 16px;
+    padding: 13px;
+  }
 }
